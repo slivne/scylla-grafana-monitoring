@@ -14,7 +14,7 @@ NODE_TARGET_FILE=$PWD/prometheus/node_exporter_servers.yml
 SCYLLA_MANGER_TARGET_FILE=$PWD/prometheus/scylla_manager_servers.yml
 GRAFANA_ADMIN_PASSWORD=""
 ALERTMANAGER_PORT=""
-DOCKER_PARAM=""
+DOCKER_PARAM="--net=host"
 
 while getopts ':hled:g:p:v:s:n:a:c:j:b:m:M:D:' option; do
   case "$option" in
